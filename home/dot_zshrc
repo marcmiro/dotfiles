@@ -134,13 +134,3 @@ alias gitp="git pull"
 alias gitc="git commit -m $1"
 alias gitps="git push origin HEAD"
 alias gitch="git checkout $1"
-
-# Other
-alias eks-dev="aws eks --region eu-west-1 update-kubeconfig --name dev-eks-cluster00 --role-arn arn:aws:iam::585257864808:role/eks-user-ro"
-alias eks-stg00="aws eks --region eu-west-1 update-kubeconfig --name stg-eks-cluster00 --role-arn arn:aws:iam::585257864808:role/eks-user-ro"
-alias eks-stg01="aws eks --region eu-west-1 update-kubeconfig --name stg-eks-cluster01 --role-arn arn:aws:iam::585257864808:role/eks-user-ro"
-alias eks-prod="aws eks --region eu-west-1 update-kubeconfig --name prod-eks-cluster00 --role-arn arn:aws:iam::585257864808:role/eks-user-ro"
-alias eks-mgmt="aws eks --region eu-west-1 update-kubeconfig --name prod-eks-mgmt00 --role-arn arn:aws:iam::585257864808:role/eks-user-ro"
-alias eksadm-dev="aws eks --region eu-west-1 update-kubeconfig --name dev-eks-cluster00 --role-arn arn:aws:iam::585257864808:role/eks-admin"
-alias eksadm-stg="aws eks --region eu-west-1 update-kubeconfig --name stg-eks-cluster00 --role-arn arn:aws:iam::585257864808:role/eks-admin"
-alias eksadm-prod="aws eks --region eu-west-1 update-kubeconfig --name prod-eks-cluster00 --role-arn arn:aws:iam::585257864808:role/eks-admin"
