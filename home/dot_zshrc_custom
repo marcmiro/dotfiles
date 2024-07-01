@@ -27,8 +27,6 @@ export EDITOR=/usr/bin/vi
 
 # AWS
 export AWS_SDK_LOAD_CONFIG=1
-export AWS_PROFILE=wuakitv-admin
-alias sso="aws sso login --profile wuakitv-admin"
 
 # Kubernetes
 alias k="kubecolor"
