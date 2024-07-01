@@ -100,55 +100,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#############
-### PERSO ###
-#############
+##############
+### CUSTOM ###
+##############
 
-## ZSH
-# Hide the username in terminal
-DEFAULT_USER prompt_context(){}
-
-# Autoinit rbenv
-eval "$(rbenv init - zsh)"
-
-# Autoinit pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-# Autoinit go
-export GOPATH=/Users/marc.miro/go
-export PATH=$PATH:$GOPATH
-export PATH=$PATH:$GOPATH/bin
-
-# CF
-export EDITOR=/usr/bin/vi
-
-# AWS
-export AWS_SDK_LOAD_CONFIG=1
-export AWS_PROFILE=wuakitv-admin
-alias sso="aws sso login --profile wuakitv-admin"
-
-# Kubernetes
-alias k="kubecolor"
-alias kubectl="kubecolor"
-alias kw="f(){ kubecolor $@ --watch;  unset -f f; }; f"
-alias kgn="kubectl get nodes -L karpenter.sh/capacity-type,beta.kubernetes.io/instance-type,karpenter.sh/provisioner-name,karpenter.sh/nodepool,topology.kubernetes.io/zone -l karpenter.sh/initialized=true --sort-by=.metadata.creationTimestamp"
-alias kgp="kubectl get pods -o wide"
-alias kd="kubectl drain --ignore-daemonsets --delete-emptydir-data $*"
-export PATH="${PATH}:${HOME}/.krew/bin"
-alias eksnv="eks-node-viewer"
-
-# Git
-alias gits="git status"
-alias gitp="git pull"
-alias gitc="git commit -m $1"
-alias gitps="git push origin HEAD"
-alias gitch="git checkout $1"
-
-# Commands
-alias watch='watch '
-alias pbc='$* | xargs echo -n | pbcopy'
-
-# Custom
 source ~/.zshrc_custom
